@@ -49,7 +49,7 @@ export class HeaderComponent {
     } else {
       header.classList.remove('header-scrolled');
     }
-  } */
+  }
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event) {
