@@ -18,8 +18,8 @@ export class HeaderComponent {
         subMenu: [
           { id: 1, label: 'Cloud computing' },
           { id: 2, label: 'Cybersécurité' },
-          { id: 3, label: 'Formation' },
-          { id: 4, label: 'Ingénierie Réseau' },
+          { id: 3, label: 'Ingénierie Réseau' },
+          { id: 4, label: 'Formation' },
           { id: 5, label: 'Développement Web' },
           { id: 6, label: 'Développement d\'Applications' },
           { id: 7, label: 'Intelligence Artificielle' }
@@ -30,7 +30,6 @@ export class HeaderComponent {
     ]
   };
   menuItemSelected: { label: string, link: string, subMenu: { id: number, label: string }[] } = { label: 'Home', link: '/', subMenu: [] };
-  currentLanguage: string = 'fr';
   dropdownVisible = false;
 
   constructor(public appMain: MainComponent, private el: ElementRef) {
@@ -40,7 +39,6 @@ export class HeaderComponent {
 
   ngOnInit(): void {
     this.menuItemSelected = { label: 'Home', link: '/', subMenu: [] };
-    this.currentLanguage = 'fr';
   }
 
   // Fonction pour gérer le défilement de la page
@@ -51,7 +49,7 @@ export class HeaderComponent {
     } else {
       header.classList.remove('header-scrolled');
     }
-  }
+  } */
 
   @HostListener('document:click', ['$event'])
   onClickOutside(event: Event) {

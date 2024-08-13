@@ -29,7 +29,7 @@ export class AboutComponent {
         text: `Chez IT-Consulting Teleo, nous nous efforçons de rester à la pointe de la technologie pour offrir des solutions durables et innovantes. Notre équipe dévouée travaille main dans la main avec vous pour s'assurer que chaque projet est mené à bien, dans le respect des délais et du budget.`
       }
     ],
-    imageUrl: "assets/img/banners/infosys-consulting-offices-timisoara-1.jpg"
+    imageUrl: "assets/img/banners/banner-14.webp"
   };
   
   aboutId: number;

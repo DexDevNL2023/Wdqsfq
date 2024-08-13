@@ -86,7 +86,7 @@ export class HomeComponent {
     description: [
       { 
         text: `
-          IT-Consulting Teleo est une entreprise camerounaise basée aux États-Unis, spécialisée dans la fourniture de solutions technologiques pour répondre à vos besoins spécifiques. Nous offrons des services variés, notamment le développement web, les services cloud, la cybersécurité, la gestion des projets informatiques, et plus encore.
+          IT-Consulting Teleo est une entreprise spécialisée dans la fourniture de solutions technologiques pour répondre à vos besoins spécifiques. Nous offrons des services variés, notamment le développement web, les services cloud, la cybersécurité, la gestion des projets informatiques, et plus encore.
         `
       },
       { 
@@ -95,7 +95,7 @@ export class HomeComponent {
         `
       }
     ],
-    imageUrl: "assets/img/about.jpg"
+    imageUrl: "assets/img/banners/banner-14.webp"
   };
   
   testimonialsContent = {
