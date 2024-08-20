@@ -11,7 +11,14 @@ export class HeaderComponent {
     logoUrl: 'assets/img/logo.png',
     menuItems: [
       { label: 'Accueil', link: '/', subMenu: [] },
-      { label: 'À Propos', link: '/about', subMenu: [] },
+      {
+        label: 'À Propos',
+        link: '/about',
+        subMenu: [
+          { id: 'who-we-are', label: 'Qui sommes-nous' },
+          { id: 'why-us', label: 'Pourquoi choisir IT-Consulting Teleo' }
+        ]
+      },
       {
         label: 'Ce Que Nous Faisons',
         link: '/service',
@@ -31,6 +38,7 @@ export class HeaderComponent {
   };
   menuItemSelected: { label: string, link: string, subMenu: { id: number, label: string }[] } = { label: 'Home', link: '/', subMenu: [] };
   dropdownVisible = false;
+  mobileMenuVisible = false;
 
   constructor(public appMain: MainComponent, private el: ElementRef) {
     // Ajoutez l'écouteur d'événement de défilement à la fenêtre
@@ -62,5 +70,9 @@ export class HeaderComponent {
   toggleDropdown(menuItem: { label: string, link: string, subMenu: { id: number, label: string }[] }): void {
       this.menuItemSelected = menuItem;
       this.dropdownVisible = !this.dropdownVisible;
+  }
+
+  toggleMobileMenu() {
+    this.mobileMenuVisible = !this.mobileMenuVisible;
   }
 }

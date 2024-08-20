@@ -32,11 +32,30 @@ export class AboutComponent {
     imageUrl: "assets/img/banners/banner-14.webp"
   };
   
-  aboutId: number;
+  aboutId: string | null = null;
 
-  constructor(public appMain: MainComponent) { }
+  constructor(public appMain: MainComponent, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+        this.aboutId = params.get('id');
+        console.log(this.aboutId);
+    });
     AOS.init();
+  }
+
+  ngAfterViewInit(): void {
+    if (this.aboutId) {
+      setTimeout(() => {
+        this.scrollTo(this.aboutId);
+      }, 500); // Ajout d'un délai pour s'assurer que le DOM est prêt
+    }
+  }
+
+  scrollTo(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

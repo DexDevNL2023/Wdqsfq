@@ -14,7 +14,10 @@ export class FooterComponent {
     logoUrl: 'assets/img/logo.png',
     usefulLinks: [
       { label: 'Accueil', link: '/', subMenu: [] },
-      { label: 'Qui sommes-nous', link: '/about', subMenu: [] },
+      { label: 'About us', link: '/about', subMenu: [
+        { id: 'who-we-are', label: 'Qui sommes-nous' },
+        { id: 'why-us', label: 'Pourquoi choisir IT-Consulting Teleo' },
+      ] },
       { label: 'Carrières', link: '/career', subMenu: [] },
       { label: 'Contacts', link: '/contact', subMenu: [] }
     ],
